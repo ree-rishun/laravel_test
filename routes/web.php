@@ -52,3 +52,6 @@ EOF;
 
     return $html;
 });
+
+
+Route::get('/controller/{id?}', 'HelloController@index');
