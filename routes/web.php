@@ -14,3 +14,41 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test/{param}', function ($param) {
+
+    $html = <<<EOF
+    
+    <html>
+    <head>
+    
+    </head>
+    <body>
+        <h1>{$param}</h1>
+    </body>
+    </html>
+
+EOF;
+
+
+    return $html;
+});
+
+Route::get('/param/{param?}', function ($param="empty") {
+
+    $html = <<<EOF
+    
+    <html>
+    <head>
+    
+    </head>
+    <body>
+        <h1>{$param}</h1>
+    </body>
+    </html>
+
+EOF;
+
+
+    return $html;
+});
